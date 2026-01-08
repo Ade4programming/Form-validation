@@ -29,71 +29,53 @@ body {
   font-size: 16px;
   height: 100vh;
 }
-main{
-  
-    display: grid;
-    grid-template-areas: "pic"
+main {
+  display: grid;
+  grid-template-areas:
+    "pic"
     "first";
 }
 @media (min-width: 1024px) {
-  main {
-    height: 900px;
-    margin: 2rem auto;
-    grid-template-areas: "first pic";
-    justify-items: center;
-    align-items: center;
-    justify-content: center;
-  }
-  .stay-updated{
-    grid-area: first;
-  }
-  picture{
-    grid-area: pic;
-  }
 }
 
-
-.hide{
+.hide {
   display: none;
 }
-.show{
+.show {
   display: block;
 }
 
-.success-message{
+.success-message {
   margin: 2rem auto;
   max-width: 1000px;
   display: grid;
   gap: 3rem;
 }
-@media screen and (max-width:1024px) {
-  .success-message{
+
+@media (max-width: 1023px) {
+  .stay-updated {
+    display: grid;
+    gap: 2rem;
+  }
+  .success-message {
     margin: 2rem 1rem;
 
-    p{
+    p {
       font-size: 1rem;
     }
   }
-   .success-message img{
-  width: 100px;
-}
-.success-message h1{
-  font-size: 5rem;
-  line-height: 1;
-}
-.success-message p{
-  font-size: 1.2rem;
-}
+  .success-message img {
+    width: 100px;
+  }
+  .success-message h1 {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  .success-message p {
+    font-size: 1.2rem;
+  }
 }
 
-
-
-@media (max-width:1023px) {
-    .stay-updated{
-        display: grid;
-  gap: 2rem;
-    }
-}
 .stay-updated {
   padding: 2rem 1rem;
 }
@@ -129,7 +111,8 @@ label {
   font-size: 12px;
   font-weight: 700;
 }
-span:nth-of-type(2), .empty{
+span:nth-of-type(2),
+.empty {
   color: var(--Red);
 }
 input {
@@ -143,15 +126,15 @@ input::placeholder {
   font-family: var(--regular-font-family);
   color: var(--Grey);
 }
-input:focus{
+input:focus {
   outline: none;
 }
-input.invalid{
+input.invalid {
   color: var(--Red);
   background-color: rgba(250, 23, 23, 0.116);
   border-color: red;
 }
-input.valid{
+input.valid {
   border-color: green;
   color: green;
 }
@@ -176,21 +159,35 @@ button:active {
 }
 
 @media screen and (min-width: 1024px) {
+  main {
+    height: 900px;
+    margin: 2rem auto;
+    grid-template-areas: "first pic";
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .stay-updated {
+    grid-area: first;
+  }
+  picture {
+    grid-area: pic;
+  }
   .stay-updated {
     padding: 7.5rem 2rem;
   }
-  .texts{
+  .texts {
     margin: 2rem 0;
   }
-  h1{
+  h1 {
     font-size: 5.2rem;
-   margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
   }
-  p{
+  p {
     font-size: 1.6rem;
-     line-height: 1.5;
+    line-height: 1.5;
   }
-  form{
+  form {
     margin-top: 4rem;
   }
   label {
@@ -211,18 +208,18 @@ button:active {
   picture img {
     height: 100%;
   }
-  section img{
+  section img {
     width: 35px;
   }
 
-  .success-message img{
-  width: 100px;
-}
-.success-message h1{
-  font-size: 10rem;
-  line-height: 1;
-}
-.success-message p{
-  font-size: 2.8rem;
-}
+  .success-message img {
+    width: 100px;
+  }
+  .success-message h1 {
+    font-size: 10rem;
+    line-height: 1;
+  }
+  .success-message p {
+    font-size: 2.8rem;
+  }
 }
