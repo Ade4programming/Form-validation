@@ -1,0 +1,228 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(assets/fonts/Roboto-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Roboto-regular";
+  src: url(assets/fonts/Roboto-Regular.ttf);
+  font-weight: 400;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Red: hsl(4, 100%, 67%);
+
+  --Blue-800: hsl(234, 29%, 20%);
+  --Blue-700: hsl(235, 18%, 26%);
+  --Grey: hsl(0, 0%, 58%);
+  --White: hsl(0, 0%, 100%);
+  --bold-font-family: "Roboto";
+  --regular-font-family: "Roboto-regular";
+}
+body {
+  font-family: var(--regular-font-family);
+  font-size: 16px;
+  height: 100vh;
+}
+main{
+  
+    display: grid;
+    grid-template-areas: "pic"
+    "first";
+}
+@media (min-width: 1024px) {
+  main {
+    height: 900px;
+    margin: 2rem auto;
+    grid-template-areas: "first pic";
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .stay-updated{
+    grid-area: first;
+  }
+  picture{
+    grid-area: pic;
+  }
+}
+
+
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}
+
+.success-message{
+  margin: 2rem auto;
+  max-width: 1000px;
+  display: grid;
+  gap: 3rem;
+}
+@media screen and (max-width:1024px) {
+  .success-message{
+    margin: 2rem 1rem;
+
+    p{
+      font-size: 1rem;
+    }
+  }
+   .success-message img{
+  width: 100px;
+}
+.success-message h1{
+  font-size: 5rem;
+  line-height: 1;
+}
+.success-message p{
+  font-size: 1.2rem;
+}
+}
+
+
+
+@media (max-width:1023px) {
+    .stay-updated{
+        display: grid;
+  gap: 2rem;
+    }
+}
+.stay-updated {
+  padding: 2rem 1rem;
+}
+h1 {
+  font-size: 2.5rem;
+  color: var(--Blue-800);
+  font-family: var(--bold-font-family);
+}
+.texts {
+  display: grid;
+  gap: 1rem;
+}
+picture img {
+  width: 100%;
+}
+section {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+p {
+  font-size: 1.1rem;
+  color: var(--Blue-700);
+  font-weight: 400;
+}
+form {
+  display: grid;
+  gap: 1rem;
+}
+label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 700;
+}
+span:nth-of-type(2), .empty{
+  color: var(--Red);
+}
+input {
+  border-radius: 0.5rem;
+  padding: 1.2rem 1.5rem;
+  border: 1px solid var(--Grey);
+  cursor: pointer;
+}
+input::placeholder {
+  font-size: 1rem;
+  font-family: var(--regular-font-family);
+  color: var(--Grey);
+}
+input:focus{
+  outline: none;
+}
+input.invalid{
+  color: var(--Red);
+  background-color: rgba(250, 23, 23, 0.116);
+  border-color: red;
+}
+input.valid{
+  border-color: green;
+  color: green;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 0.5em;
+  padding: 1rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--White);
+  border-radius: 0.5rem;
+  background-color: var(--Blue-700);
+  font-family: var(--bold-font-family);
+}
+button:active {
+  transform: translateY(2px);
+  background-image: linear-gradient(to right, var(--Red), rgb(252, 27, 27));
+  cursor: pointer;
+  box-shadow: 0 20px 3rem var(--Red, 0.1);
+}
+
+@media screen and (min-width: 1024px) {
+  .stay-updated {
+    padding: 7.5rem 2rem;
+  }
+  .texts{
+    margin: 2rem 0;
+  }
+  h1{
+    font-size: 5.2rem;
+   margin-bottom: 1.5rem;
+  }
+  p{
+    font-size: 1.6rem;
+     line-height: 1.5;
+  }
+  form{
+    margin-top: 4rem;
+  }
+  label {
+    font-size: 1.5rem;
+  }
+  input,
+  button {
+    padding: 2rem;
+    font-size: 1.7rem;
+    border-radius: 1rem;
+  }
+  input::placeholder {
+    font-size: 1.7rem;
+  }
+  picture {
+    height: 100%;
+  }
+  picture img {
+    height: 100%;
+  }
+  section img{
+    width: 35px;
+  }
+
+  .success-message img{
+  width: 100px;
+}
+.success-message h1{
+  font-size: 10rem;
+  line-height: 1;
+}
+.success-message p{
+  font-size: 2.8rem;
+}
+}
